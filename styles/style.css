@@ -292,7 +292,6 @@ ol {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
   border: 1px solid #fff;
   background: transparent;
   color: #fff;
@@ -309,11 +308,13 @@ ol {
   align-self: flex-end;
   width: 194px;
   height: 34px;
+  margin-bottom: 5px;
 }
 
 .more-button {
-  width: inherit;
+  width: 100%;
   height: 34px;
+  margin-top: 30px;
 }
 
 .button:focus {
