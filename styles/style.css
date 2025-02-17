@@ -66,8 +66,6 @@ ol {
 
 .result {
   grid-area: result;
-  padding-top: 78px;
-  padding-left: 0px;
 }
 
 .search-form {
@@ -75,7 +73,7 @@ ol {
   align-items: flex-start;
   gap: 40px;
   justify-content: space-between;
-  margin-top: 16px;
+  height: 54px;
 }
 
 .content__details {
@@ -88,28 +86,32 @@ ol {
 }
 
 .content__list-container {
+  height: 298px;
+  padding-right: 3px;
+  padding-left: 2px;
+  overflow: auto;
+  position: relative;
+}
+
+.content__list {
+  position: relative;
   display: flex;
   flex-direction: column;
-  height: 298px;
-  overflow: auto;
+  gap: 30px;
 }
 
 .result__video-container {
-  height: 456px;
+  height: 386px;
+  margin-bottom: 16px;
   position: relative;
 }
 
 .result__video {
   width: 100%;
-  height: 386px;
+  height: 100%;
   object-fit:cover;
-  object-position: center;
-}
-
-.content__list-item {
-  padding-bottom: 30px;
-  padding-left: 3px;
-  padding-right: 3px;
+  cursor: pointer;
+  position: absolute;
 }
 
 .content__video-card {
@@ -133,10 +135,10 @@ ol {
 }
 
 .search-form__fieldset-title {
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  font-size: 18px;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
 }
 
 .title {
@@ -153,6 +155,7 @@ text-transform: uppercase;
 }
 
 .content__card-link {
+  display: block;
   text-decoration: none;
   font-style: normal;
   color: #FFF;
@@ -171,6 +174,7 @@ text-transform: uppercase;
 }
 
 .content__video-card-description {
+
   font-family: "Fira Sans Condensed";
   font-size: 18px;
   font-weight: 400;
@@ -204,6 +208,7 @@ text-transform: uppercase;
   display: flex;
   gap: 15px;
   background: transparent;
+  margin-bottom: 5px;
 }
 
 .search-form__fieldset {
@@ -213,9 +218,8 @@ text-transform: uppercase;
 .search-form__label {
   display: flex;
   width: fit-content;
-  gap:5px;
-  margin-top: 5px;
   align-items: center;
+  cursor: pointer;
 }
 
 .search-form__textfield {
@@ -229,9 +233,9 @@ text-transform: uppercase;
   font-style: normal;
   font-weight: 400;
   background-color: transparent;
-  width: 211px;
-  padding: 0;
-  cursor: pointer
+  width: 225px;
+  padding-left: 0px;
+  cursor: pointer;
 }
 
 .search-form__textfield:active {
@@ -243,7 +247,7 @@ text-transform: uppercase;
 }
 
 .search-form__label:has(.search-form__textfield:focus-visible) {
-  outline: 4px solid gray;
+  outline: 1px solid #FFF;
 }
 
 .search-form__textfield { 
@@ -258,14 +262,17 @@ text-transform: uppercase;
   height: 19px;
   border: 1px solid #FFF;
   padding-top: 1.5px;
+  padding-left: 0px;
   padding-bottom: 1.5px;
-  cursor: pointer
+  margin-right: 5px;
+  cursor: pointer;
 }
 
 .search-form__pseudo-checkbox::after {
   content: '';
-  width: 18px;
-  height: 18px;
+  width: inherit;
+  height: inherit;
+  background: inherit;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
@@ -276,13 +283,12 @@ text-transform: uppercase;
   height: 15px;
 }
 
- /* попытка реализовать фак.шаг*/
-.search-form__label:focus {
+.search-form__label:has(.search-form__checkbox:focus) {
   outline: 1px solid #FFF;
 }
 
-.search-form__label-text:hover{
-  border-bottom: 1px solid red;
+.search-form__label:hover > .search-form__label-text {
+  border-bottom: 1px solid #FFF;
 }
 
 .button {
@@ -317,10 +323,6 @@ text-transform: uppercase;
   outline: none;
 }
 
-.button:active {
-  background: #545050;
-}
-
 .button:hover {
   text-decoration-line: underline;
   text-decoration-style: solid;
@@ -331,20 +333,25 @@ text-transform: uppercase;
   cursor: pointer;
 }
 
+.button:active {
+  background: #545050;
+}
+
 .button:focus-visible {
   outline: 1px solid #FFF;
 }
 
-.content__card-link_current:focus{
-  outline: none;
-}
+/* карточки*/
 
-.content__card-link_current:active{
+.content__card-link_current{
   background: #545050;
 }
 
-.content__card-link_current:hover {
-  line-height: 16.2px;
+.content__card-link:focus{
+  outline: none;
+}
+
+.content__card-link:hover {
   text-decoration-line: underline;
   text-decoration-style: solid;
   text-decoration-skip-ink: none;
@@ -353,12 +360,11 @@ text-transform: uppercase;
   text-underline-position: from-font;
 }
 
-.content__card-link_current:focus-visible{
-  align-self: stretch;
-  color: #FFF;
-  font-family: "Fira Sans Condensed";
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 16.2px;
+.content__card-link:focus-visible{
+  outline: 1px solid #FFF;
+}
+
+.content__list-item {
+  padding-left: 3px;
+  padding-right: 3px;
 }
