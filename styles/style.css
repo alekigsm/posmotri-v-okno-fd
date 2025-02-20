@@ -139,6 +139,7 @@ ol {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  height: 22px;
 }
 
 .title {
@@ -237,6 +238,8 @@ ol {
   width: 225px;
   padding-left: 0;
   appearance: none;
+  height: 27px;
+  margin-top: 1px;
 }
 
 .search-form__textfield:active {
@@ -308,7 +311,7 @@ ol {
   align-self: flex-end;
   width: 194px;
   height: 34px;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 
 .more-button {
