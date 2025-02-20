@@ -1,7 +1,7 @@
 {
   "name": "test-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "https://github.com/alekigsm/posmotri-v-okno-fd",
   "main": "index.js",
   "scripts": {
     "test": "echo ",
@@ -17,5 +17,14 @@
   "dependencies": {
     "prettier": "^2.8.0",
     "stylelint": "^14.15.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alekigsm/posmotri-v-okno-fd.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alekigsm/posmotri-v-okno-fd/issues"
+  },
+  "homepage": "https://github.com/alekigsm/posmotri-v-okno-fd#readme"
 }
